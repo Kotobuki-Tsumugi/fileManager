@@ -1,9 +1,7 @@
 $(document).ready(function () {
     $.validator.setDefaults({
         submitHandler: function (form) {
-            if (form.submit()) {
-                sbmt();
-            }
+            sbmt();
         }
     });
 
@@ -39,8 +37,7 @@ $(document).ready(function () {
             mobileNumber: {
                 required: '电话号码不能为空！'
             }
-        },
-        methods: {}
+        }
     });
 
     $.validator.addMethod("checkPassword", function (value, element, params) {
