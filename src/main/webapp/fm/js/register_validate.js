@@ -1,18 +1,11 @@
-// $(document).ready(function () {
-//     $.validator.setDefaults({
-//         submitHandler: function (form) {
-//             form.submit();
-//         }
-//     })
+$(document).ready(function () {
+    $.validator.setDefaults({
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
 
-$('#subt').click(function() {
-    if(validateForm.form()) {
-        //ajax提交表单   
-    }
-})
-
-function validateForm() {
-    return $('#registForm').validate({
+    $('#registForm').validate({
         rules: {
             loginName: {
                 required: true
@@ -44,7 +37,8 @@ function validateForm() {
             mobileNumber: {
                 required: '电话号码不能为空！'
             }
-        }
+        },
+        methods: {}
     });
 
     $.validator.addMethod("checkPassword", function (value, element, params) {
