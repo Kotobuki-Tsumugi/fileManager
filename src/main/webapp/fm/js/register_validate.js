@@ -4,6 +4,13 @@
 //             form.submit();
 //         }
 //     })
+
+$('#subt').click(function() {
+    if(validateForm.form()) {
+        //ajax提交表单   
+    }
+})
+
 function validateForm() {
     return $('#registForm').validate({
         rules: {
