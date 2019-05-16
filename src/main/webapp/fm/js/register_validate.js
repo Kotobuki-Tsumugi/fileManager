@@ -1,7 +1,9 @@
 $(document).ready(function () {
     $.validator.setDefaults({
         submitHandler: function (form) {
-            form.submit();
+            if (form.submit()) {
+                sbmt();
+            }
         }
     });
 
