@@ -1,11 +1,11 @@
-$(document).ready(function () {
-    $.validator.setDefaults({
-        submitHandler: function (form) {
-            form.submit();
-        }
-    })
-
-    $('#registForm').validate({
+// $(document).ready(function () {
+//     $.validator.setDefaults({
+//         submitHandler: function (form) {
+//             form.submit();
+//         }
+//     })
+function validateForm() {
+    return $('#registForm').validate({
         rules: {
             loginName: {
                 required: true
